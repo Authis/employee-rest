@@ -13,12 +13,12 @@
 #CMD ["java -jar emp-reg-rest-1.0-SNAPSHOT.jar"]
 
 
-
 FROM openjdk:8-jdk-alpine
-VOLUME /tmp
+WORKDIR /tmp
 ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} ./
-CMD ["java","-Dspring.profiles.active=default”,"-jar","/emp-reg-rest-1.0-SNAPSHOT.jar"]
+COPY ${JAR_FILE} .
+ENTRYPOINT ["java", "-Dspring.profiles.active=default", "-jar", "emp-reg-rest-1.0-SNAPSHOT.jar"]
+
 
 
 
