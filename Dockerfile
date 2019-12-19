@@ -7,7 +7,7 @@
 #RUN mvn install
 FROM openjdk:8-jre-alpine
 WORKDIR /usr/app
-COPY --from=1 /usr/app/target/emp-reg-rest-1.0-SNAPSHOT.jar /usr/app
+COPY  /target/emp-reg-rest-1.0-SNAPSHOT.jar /usr/app
 CMD ["java -jar emp-reg-rest-1.0-SNAPSHOT.jar"]
 
 
