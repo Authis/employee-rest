@@ -18,7 +18,7 @@ FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} ./
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/emp-reg-rest-1.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-Dspring.profiles.active=default”,"-jar","/emp-reg-rest-1.0-SNAPSHOT.jar"]
 
 
 
