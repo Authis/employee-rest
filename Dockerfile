@@ -8,6 +8,7 @@
 FROM openjdk:8-jre-alpine
 WORKDIR /usr/app
 COPY  /target/emp-reg-rest-1.0-SNAPSHOT.jar /usr/app
+RUN echo $(pwd)
 CMD ["java -jar emp-reg-rest-1.0-SNAPSHOT.jar"]
 
 
