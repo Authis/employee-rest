@@ -17,7 +17,7 @@ FROM openjdk:8-jdk-alpine
 WORKDIR /tmp
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} .
-ENTRYPOINT ["java", "-Dspring.profiles.active=default”, "-jar", "emp-reg-rest-1.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-Dspring.profiles.active=default", "-jar", "emp-reg-rest-1.0-SNAPSHOT.jar"]
 
 
 
