@@ -31,6 +31,33 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
+    stage('Test') {
+             steps {
+                 script{
+                        try{
+                             echo '******** TESTING CODE **********'
+                             sh 'mvn test'
+                             echo '******** TESTING CODE WAS SUCCESSFUL **********'
+                         }catch (e) {
+                             echo '******** TESTING CODE WAS NOT SUCCESSFUL DUE TO ERROR ********'+e
+                         }
+                 }
+             }
+    }
+
+    stage('JaCoCo') {
+                      steps {
+                          script{
+                               try{
+                                    echo '******** JACOCO **********'
+                                    jacoco()
+                                    echo '******** JACOCO STAGE WAS SUCCESSFUL **********'
+                               }catch (e) {
+                                    echo '******** JACOCO STAGE WAS NOT SUCCESSFUL DUE TO ERROR ********'+e
+                               }
+                          }
+                       }
+    }
      stage("SonarQube analysis") {
            
             steps {
