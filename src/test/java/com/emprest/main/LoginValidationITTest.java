@@ -1,6 +1,6 @@
 package com.emprest.main;
 
- import com.emprest.main.EmpLogin
+ import com.emprest.main.EmpLogin;
  import com.emprest.SpringBootRestApplication;
  import org.junit.Before;
  import org.junit.Test;
