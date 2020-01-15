@@ -1,7 +1,7 @@
 package com.emprest.main;
 
   
- import com.emprest.main.EmpLogin
+ import com.emprest.main.EmpLogin;
  import com.emprest.main.LoginValidation;
  import com.fasterxml.jackson.databind.ObjectMapper;
  import org.junit.Before;
