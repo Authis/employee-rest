@@ -15,7 +15,7 @@ public class LoginValidation {
 
         if(empLogin.getUsername().equalsIgnoreCase("admin") && empLogin.getPassword().equalsIgnoreCase("admin")){
 
-            message.setStatusMsg("SUCCESS");
+            message.setStatusMsg("SUCCESS capstone");
         }else{
             message.setStatusMsg("FAILURE");
         }
