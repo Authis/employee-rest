@@ -45,7 +45,7 @@ public class LoginValidationIntegTest {
                 then().
                 contentType(ContentType.JSON).
                 //body(Matchers.contains("SUCCESS"));
-                        body("statusMsg", equalTo("SUCCESS"));
+                        body("statusMsg", equalTo("SUCCESS_SUCCESS"));
 
     }
 }
